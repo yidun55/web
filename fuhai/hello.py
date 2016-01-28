@@ -13,7 +13,7 @@ ELASTIC_SERVER = '10.5.28.11:9200'
 
 @app.route('/')
 def index():
-    return render_template('index.html')    
+    return render_template('easyui.html')    
     
 @app.route('/search')
 def search():

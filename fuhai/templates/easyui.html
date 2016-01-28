@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+
+    <div >
+        <form id="submitform">
+            <table align="center">
+                <tr>
+                    <td><input class="easyui-textbox" data-options="prompt:'请输入手机号查看用户信息',required:true" name="q" style="width:400px;height:25px"/></td>
+                    <td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+        
+        <div id="pinfo" class="easyui-layout" style="width:700px;height:240px;" align="center">
+    
+        <div data-options="region:'west',split:true" title="用户图像" style="width:300px;">
+            <image id="persion_image" src="{{
+      url_for('static', filename='figure/usrs/u25.png')
+      }}" style="width:200px;height:200px"></image>
+        </div>
+        <div data-options="region:'center',title:'用户详情',iconCls:'icon-ok'">
+            <table align="left">
+                <tr>
+                    <td>
+                    
+                        手机号：
+                    </td>
+                    <td id="phonenum">13520655291
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        用户ID:
+                    </td>
+                    <td id="userid">
+                        0009
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        姓名：
+                    </td>
+                    <td id="name">
+                        王鹏
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        身份证号:
+                    </td>
+                    <td id="icard">
+                        923u1j5j5j5jj5jjj
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div data-options="region:'south',split:true" title="信息挖掘" style="width:300px;">
+     <div class="easyui-tabs" style="width:700px;height:250px">
+            
+             <div title="用户属性" style="padding:10px" align="center">
+                
+                <p id="gender">男</p>
+                
+                <p id="age">90后</p>
+                <p id="star">天秤座</p>
+                <p id="nature">属猴</p>
+                <p id="bp">出生地在广州</p>
+                <p id="lp">居住地在北京</p>
+                <p id="yp">经常在上海活动</p>
+                <p id="score">评分：8</p>
+                <p id="rank">等级：3</p>
+             </div>
+             
+              <div title="用户资源" style="padding:10px" align="center">
+                    
+                    <table>
+                        <tr>
+                            <td>
+                                银行卡
+                            </td>
+                            <td id="bank">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                终端
+                            </td>
+                            <td id="ternal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                APP
+                            </td>
+                            <td id="app">
+                            </td>
+                        </tr>
+                    </table>
+                
+              </div>
+              
+              
+              <div title="用户接触" style="padding:10px" align="center">
+                
+                    <table>
+                        <tr>
+                            <td >
+                                业务
+                            </td>
+                            <td id="work">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                产品
+                            </td>
+                            <td id="product">
+                            </td>
+                        </tr>
+                    </table>
+              </div>
+              
+              <div title="行为习惯" style="padding:10px" align="center">
+                
+                    <table>
+                        <tr>
+                            <td>最常交易时段
+                            </td>
+                            <td id="time">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>最常交易星期
+                            </td>
+                            <td id="week">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>最常交易日期
+                            </td>
+                            <td id="day">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                最常交易地点
+                            </td>
+                            <td id="place">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                最常使用的终端
+                            </td>
+                            <td id="ptermal">
+                            </td>
+                        </tr>
+                        <tr >
+                         <td >最常使用的业务
+                         </td>
+                         <td id="pwork">
+                         </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            不良记录
+                            </td>
+                            <td id="record">
+                            </td>
+                        </tr>
+                    </table>
+                
+              </div>
+     </div>
+     </div>
+     
+</body>
+{% endblock %}
+
+
+
+
+<!--body>
+
+    <h2>Basic Tabs</h2>
+    <p>Click tab strip to swap tab panel content.</p>
+    <div style="margin:20px 0 10px 0;"></div>
+    <div class="easyui-tabs" style="width:700px;height:250px">
+        <div title="About" style="padding:10px">
+            <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+            <ul>
+                <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+                <li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+                <li>using easyui you don't need to write many javascript code, you usually defines user-interface by writing some HTML markup.</li>
+                <li>complete framework for HTML5 web page.</li>
+                <li>easyui save your time and scales while developing your products.</li>
+                <li>easyui is very easy but powerful.</li>
+            </ul>
+        </div>
+        <div title="My Documents" style="padding:10px">
+            <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+        </div>
+        <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+            This is the help content.
+        </div>
+    </div>
+</body-->
