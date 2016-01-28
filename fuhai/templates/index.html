@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1> lakala标签库 </h1>
+                        <div style="margin-left:auto;margin-right:auto;text-align:center;width:600px;border:2px #efefef solid">
+          </div>
+            <p>搜索您感兴趣的</p>
+        </div>
+<!--
+    <form action="/search">     
+        Search: <input type="text" name="term">
+        <input type="submit" value="submit">    
+    </form>
+-->
+    <form action="/search" method="get">
+    <div class="input-group">
+        <input type="text" name = "term" class="form-control" placeholder="Search term">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Go!</button>
+        </span>
+    </div>
+    </form>
+</body>
+</html>
