@@ -1,9 +1,11 @@
 #-*-coding:utf8-*-
 
 from flask import Flask, render_template
-from flask import request
+from flask import request, jsonify
 import requests
 import json
+from functools import wraps
+from flask import make_response
 
 app = Flask(__name__)
 
@@ -11,9 +13,41 @@ INDEX_NAME = "law"
 document_type = "c_ppai_blacklist"
 ELASTIC_SERVER = '10.5.28.11:9200'
 
+def allow_cross_domain(fun):
+    """
+    允许跨域请求
+    """
+    @wraps(fun)
+    def wrapper_fun(*args, **kwargs):
+        rst = make_response(fun(*args, **kwargs))
+        rst.headers['Access-Control-Allow-Origin'] = '*'
+        rst.headers['Access-Control-Allow-Methods'] = 'PUT,GET,POST,DELETE'
+        allow_headers = "Referer,Accept,Origin,User-Agent"
+        rst.headers['Access-Control-Allow-Headers'] = allow_headers
+        return rst
+    return wrapper_fun
+
+
 @app.route('/')
 def index():
-    return render_template('easyui.html')    
+    return render_template('home.html')
+
+@app.route('/easyui') 
+def easyui():
+    return  render_template('easyui.html') 
+
+@app.route("/query")
+def get_mobile_data():
+    print "fjkdsaljkflakjsdlfkjalskjdflakjs"
+    term = request.args['mobile']
+
+    print term
+
+    INDEX_NAME = "label"
+    document_type = "ulb_an_m"
+    r = requests.post('http://' + ELASTIC_SERVER + '/' + INDEX_NAME + '/' +document_type+'/_search?q=' + request.args['mobile']) 
+    response_dict = json.loads(r.text)
+    return jsonify(response_dict)
     
 @app.route('/search')
 def search():

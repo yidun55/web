@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+<script type="text/javascript" charset="UTF-8">
+    var centerTabs;
+    function addTabFun(opts) {
+        var options = $.extend({
+            title : '',
+            content : '<iframe src="' + opts.src + '" frameborder="0" style="border:0;width:100%;height:99.2%;"></iframe>',
+            closable : true,
+            iconCls : ''
+        }, opts);
+        if (centerTabs.tabs('exists', options.title)) {
+            centerTabs.tabs('close', options.title);
+        }
+        centerTabs.tabs('add', options);
+    };
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    var tree;
+    $(function() {
+        tree = $('#tree').tree({
+            data : [{
+            
+                "id":1,
+                "text":"首页",
+                "state":"open",
+                "iconCls":"",
+                "children":[{
+                
+                    "id":11,
+                    "text":"用户标签",
+                    "iconCls":"",
+                    "attributes":{
+                        
+                        src:"/easyui"
+                    }
+                    
+                },{
+                
+                    "id":12,
+                    "text":"用户群体探查",
+                    "iconCls":"",
+                    "attributes":{
+                        
+                        src:""
+                    }
+                },{
+                
+                    "id":13,
+                    "text":"标签库",
+                    "iconCls":"",
+                    "attributes":{
+                        
+                        src:""
+                    }
+                }]
+            }],//手动设置菜单树
+            animate : false,
+            onClick : function(node) {
+                if (node.attributes && node.attributes.src && node.attributes.src != '') {
+                    var href;
+                        href = node.attributes.src;
+                    addTabFun({
+                        src : href,
+                        title : node.text
+                    });
+                } else {
+                    addTabFun({
+                        src : 'test/err.jsp',
+                        title : '工程建设'
+                    });
+                }
+            },
+            onLoadSuccess : function(node, data) {
+                var t = $(this);
+                if (data) {
+                    $(data).each(function(index, d) {
+                        if (this.state == 'closed') {
+                            t.tree('expandAll');
+                        }
+                    });
+                }
+            }
+        });
+        
+        
+        centerTabs = $('#centerTabs').tabs({
+            border : false,
+            fit : true
+        });
+    });
+    function collapseAll() {
+        var node = tree.tree('getSelected');
+        if (node) {
+            tree.tree('collapseAll', node.target);
+        } else {
+            tree.tree('collapseAll');
+        }
+    }
+    function expandAll() {
+        var node = tree.tree('getSelected');
+        if (node) {
+            tree.tree('expandAll', node.target);
+        } else {
+            tree.tree('expandAll');
+        }
+    }
+</script>
+
+    <div class="easyui-layout" fit="true">
+    <div data-options="region:'center',iconCls:'icon-ok'" title="功能展现" style="padding:8px">
+        <div id="centerTabs"></div>
+    </div>
+     <div data-options="region:'west',split:true" title="系统菜单" style="width:300px;">
+        
+        <div  border="false">
+            <ul id="tree" style="margin-top: 5px;"></ul>
+        </div>
+    </div>
+    </div>
+</body>
+{% endblock %}

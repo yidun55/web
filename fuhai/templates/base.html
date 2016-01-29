@@ -5,7 +5,6 @@
     <title>Basic Tabs - jQuery EasyUI Demo</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jseasyui/easyui/themes/default/easyui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jseasyui/easyui/demo.css') }}">
     <script type="text/javascript" src="{{
       url_for('static', filename='jseasyui/easyui/jquery.min.js')
       }}"></script>
@@ -32,7 +31,7 @@
       }}" charset="utf-8"></script>
     <!-- 引入EasyUI Portal插件 -->
     <link rel="stylesheet" href="{{
-      url_for('static', filename='jseasyui/easyui/jquery-easyui-portal/portal.css')
+      url_for('static', filename='jseasyui/jquery-easyui-portal/portal.css')
       }}" type="text/css">
     <script type="text/javascript" src="{{
       url_for('static', filename='jseasyui/jquery-easyui-portal/jquery.portal.js')
@@ -57,6 +56,10 @@
       url_for('static', filename='jseasyui/syExtJavascript.js')
       }}" type="text/javascript" charset="utf-8"></script>    
 </head>
-
+<body>
+  {% block content %}
+   <div>原始页面</div>
+  {% endblock %}
+</body>
 
 </html>
