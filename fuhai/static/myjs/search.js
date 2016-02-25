@@ -7,9 +7,8 @@ function submitForm(){
         alert("请输入11位手机号码");  //最好加个正则判断数字
         return;
     }
-
     $.ajax({
-        url:'http://127.0.0.1:5000/query',
+        url:'/query',
         data:{'mobile':'13737177252'},
         datatype:'json',
         success:function(data){

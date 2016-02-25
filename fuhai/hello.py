@@ -36,18 +36,21 @@ def index():
 def easyui():
     return  render_template('easyui.html') 
 
-@app.route("/query")
+@app.route("/query", methods=['GET', 'POST'])
 def get_mobile_data():
-    print "fjkdsaljkflakjsdlfkjalskjdflakjs"
-    term = request.args['mobile']
+    if request.method == 'POST':
+        print "fjkdsaljkflakjsdlfkjalskjdflakjs"
+        term = request.args['mobile']
 
-    print term
+        print term
 
-    INDEX_NAME = "label"
-    document_type = "ulb_an_m"
-    r = requests.post('http://' + ELASTIC_SERVER + '/' + INDEX_NAME + '/' +document_type+'/_search?q=' + request.args['mobile']) 
-    response_dict = json.loads(r.text)
-    return jsonify(response_dict)
+        INDEX_NAME = "label"
+        document_type = "ulb_an_m"
+        r = requests.post('http://' + ELASTIC_SERVER + '/' + INDEX_NAME + '/' +document_type+'/_search?q=' + request.args['mobile']) 
+        response_dict = json.loads(r.text)
+        return jsonify(response_dict)
+    else:
+        print "2woring"
     
 @app.route('/search')
 def search():
@@ -101,5 +104,5 @@ def parse_search_result(response_dict):
 
 
 if __name__ == '__main__':
-    app.config['SECRET_KEY'] = 'you_will_never_guess'
-    app.run(debug=True)
+    app.debug = True
+    app.run()

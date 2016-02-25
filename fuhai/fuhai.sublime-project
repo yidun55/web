@@ -1,0 +1,29 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"python",
+				"-u",
+				"$file"
+			],
+			"env":
+			{
+				"PYTHONPATH": "E:/learn/python/flask/venv/Scripts/python;E:/learn/python/flask/venv/Lib/site-packages"
+			},
+			"name": "Run Tests",
+			"selector": "source.python",
+			"working_dir": "E:/learn/python/flask/web/fuhai"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "E:\\learn\\python\\flask\\venv\\Scripts\\python;E:\\learn\\python\\flask\\venv\\Lib\\site-packages"
+		},
+		{
+			"path": "E:\\learn\\python\\flask\\web"
+		}
+	]
+}

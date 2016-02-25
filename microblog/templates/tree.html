@@ -1,0 +1,97 @@
+<html
+     <head>
+          <meta charset="utf-8" />
+          <title>label tree</title>
+          <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jsmind/style/jsmind.css') }}">
+          <script type="text/javascript" src="{{
+          url_for('static', filename='jsmind/js/jsmind.draggable.js')
+          }}"></script>
+          <script type="text/javascript" src="{{
+          url_for('static', filename='jsmind/js/jsmind.js')
+          }}"></script>
+          <script type="text/javascript" src="{{
+          url_for('static', filename='jsmind/js/jsmind.screenshot.js')
+          }}"></script>
+
+          <!-- 引入kube.css for导航 -->
+          <link id="easyuiTheme" rel="stylesheet" href="{{
+            url_for('static', filename='jseasyui/style/kube.css')
+            }}" type="text/css">
+          <link id="easyuiTheme" rel="stylesheet" href="{{
+            url_for('static', filename='jseasyui/style/main.css')
+            }}" type="text/css">
+
+     </head>
+     <body>
+
+      <!-- 导航栏 -->
+      <div id="header" class="group wrap header">
+                  <div class="content">
+          <div id="elogo" class="navbar navbar-left">
+              <ul>
+                  <li>
+                  <a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}"><img src="{{
+      url_for('static', filename='figure/background/lakala_new.png')
+      }}" width="200" height="60" alt="jQuery EasyUI"/></a>
+                  </li>
+              </ul>
+          </div>
+          <div id="navbar-1" class="navbar navbar-right">
+              <ul>
+                  <li><a href="/">首页</a></li>
+                  <li><a href="/signin">用户标签</a></li>
+                  <li><a href="/usergroup">用户群体探查</a></li>
+                  <li><a href="/tree">标签库</a></li>
+                  <li><a href="/report">用户报告</a></li>
+                  <li><a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}">联系我们</a></li>
+              </ul>
+          </div>
+      </div>
+      </div>
+
+
+
+    <div id="jsmind_container"></div>
+    <script type="text/javascript">
+    var mind = {
+        /* 元数据，定义思维导图的名称、作者、版本等信息 */
+        "meta":{
+            "name":"jsMind-demo-tree",
+            "author":"hizzgdev@163.com",
+            "version":"0.2"
+        },
+        /* 数据格式声明 */
+        "format":"node_tree",
+        /* 数据内容 */
+        "data":{"id":"root","topic":"jsMind","children":[
+            {"id":"easy","topic":"Easy","direction":"left","children":[
+                {"id":"easy1","topic":"Easy to show"},
+                {"id":"easy2","topic":"Easy to edit"},
+                {"id":"easy3","topic":"Easy to store"},
+                {"id":"easy4","topic":"Easy to embed"}
+            ]},
+            {"id":"open","topic":"Open Source","direction":"right","children":[
+                {"id":"open1","topic":"on GitHub"},
+                {"id":"open2","topic":"BSD License"}
+            ]},
+            {"id":"powerful","topic":"Powerful","direction":"right","children":[
+                {"id":"powerful1","topic":"Base on Javascript"},
+                {"id":"powerful2","topic":"Base on HTML5"},
+                {"id":"powerful3","topic":"Depends on you"}
+            ]},
+            {"id":"other","topic":"test node","direction":"left","children":[
+                {"id":"other1","topic":"I'm from local variable"},
+                {"id":"other2","topic":"I can do everything"}
+            ]}
+        ]}
+    };
+    var options = {                   // options 将在下一章中详细介绍
+        container:'jsmind_container', // [必选] 容器的ID
+        editable:true,                // [可选] 是否启用编辑
+        theme:'orange'                // [可选] 主题
+    };
+    var jm = new jsMind(options);
+    jm.show(mind);
+</script>
+     </body>
+</html>

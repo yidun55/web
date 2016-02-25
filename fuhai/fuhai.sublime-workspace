@@ -1,0 +1,1283 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cen",
+				"center	Tag"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"ali",
+				"alice_mask"
+			],
+			[
+				"resi",
+				"residuals"
+			],
+			[
+				"cle",
+				"cleaned_data"
+			],
+			[
+				"da",
+				"DataFrame"
+			],
+			[
+				"sc",
+				"scores"
+			],
+			[
+				"pre",
+				"pred_l"
+			],
+			[
+				"y",
+				"y_test_pred"
+			],
+			[
+				"y_",
+				"y_test"
+			],
+			[
+				"y_t",
+				"y_test_pred"
+			],
+			[
+				"x_",
+				"x_train"
+			],
+			[
+				"wr",
+				"writeIn"
+			],
+			[
+				"path",
+				"path_w"
+			],
+			[
+				"mo",
+				"mob_num"
+			],
+			[
+				"cl",
+				"cleaned_data_t"
+			],
+			[
+				"fe",
+				"features"
+			],
+			[
+				"du",
+				"dump_list"
+			],
+			[
+				"dum",
+				"dump_list"
+			],
+			[
+				"to",
+				"to_dump"
+			],
+			[
+				"col",
+				"col_list"
+			],
+			[
+				"fea",
+				"features"
+			],
+			[
+				"it",
+				"itervalues"
+			],
+			[
+				"u",
+				"u_id"
+			],
+			[
+				"ut",
+				"utf-8"
+			],
+			[
+				"con",
+				"con_s"
+			],
+			[
+				"url_",
+				"url_title_date"
+			],
+			[
+				"ti",
+				"title_date"
+			],
+			[
+				"in",
+				"input_list"
+			],
+			[
+				"e",
+				"extract"
+			],
+			[
+				"announce",
+				"announcement"
+			],
+			[
+				"do",
+				"do_foo"
+			],
+			[
+				"__",
+				"__init__"
+			],
+			[
+				"par",
+				"parse_parms"
+			],
+			[
+				"pa",
+				"parms"
+			],
+			[
+				"lo",
+				"logging"
+			],
+			[
+				"xp",
+				"xp_u"
+			],
+			[
+				"E",
+				"Exception"
+			],
+			[
+				"cas",
+				"case_type"
+			],
+			[
+				"hea",
+				"headers"
+			],
+			[
+				"or",
+				"order"
+			],
+			[
+				"en",
+				"endDate"
+			],
+			[
+				"req",
+				"request_seen"
+			],
+			[
+				"fi",
+				"file_haveRequested"
+			],
+			[
+				"ha",
+				"file_haveRequested"
+			],
+			[
+				"file",
+				"file_counter"
+			],
+			[
+				"fil",
+				"file_counter"
+			],
+			[
+				"tmp",
+				"tmp2"
+			],
+			[
+				"co",
+				"court"
+			],
+			[
+				"id",
+				"id_case"
+			],
+			[
+				"class",
+				"classi"
+			],
+			[
+				"L",
+				"LAP"
+			],
+			[
+				"std",
+				"std_map"
+			],
+			[
+				"log",
+				"log10_trans_col"
+			],
+			[
+				"nor",
+				"normal_features"
+			],
+			[
+				"mean",
+				"mean_v"
+			],
+			[
+				"max",
+				"max_v"
+			],
+			[
+				"no",
+				"normal_map"
+			],
+			[
+				"w",
+				"writeIn"
+			],
+			[
+				"sp",
+				"SpecialWorker"
+			],
+			[
+				"per",
+				"person_court_list_url"
+			],
+			[
+				"shix",
+				"shixinUrl"
+			],
+			[
+				"shi",
+				"shixinUrl"
+			],
+			[
+				"oep",
+				"opener"
+			],
+			[
+				"ope",
+				"opener"
+			],
+			[
+				"la",
+				"la_te"
+			],
+			[
+				"data",
+				"data_del"
+			],
+			[
+				"num",
+				"numerical"
+			],
+			[
+				"ex",
+				"exists"
+			],
+			[
+				"exist",
+				"exist_col"
+			],
+			[
+				"exi",
+				"exist_col"
+			],
+			[
+				"mob",
+				"mobileAndPreds"
+			],
+			[
+				"tes",
+				"testErr"
+			],
+			[
+				"test",
+				"testData"
+			],
+			[
+				"ma",
+				"maxBins"
+			],
+			[
+				"ca",
+				"categoricalFeaturesInfo"
+			],
+			[
+				"data_",
+				"data_p"
+			],
+			[
+				"l",
+				"LabeledPoint"
+			],
+			[
+				"Ve",
+				"Vectors"
+			],
+			[
+				"page",
+				"pageNum"
+			],
+			[
+				"inde",
+				"IndexError"
+			],
+			[
+				"part",
+				"parts"
+			],
+			[
+				"tab",
+				"table_title"
+			],
+			[
+				"xpa",
+				"xpath_str"
+			],
+			[
+				"urll",
+				"urllib2"
+			],
+			[
+				"url",
+				"urllib"
+			],
+			[
+				"conf",
+				"conf_info"
+			],
+			[
+				"list",
+				"listHxs"
+			],
+			[
+				"mi",
+				"middlewares"
+			],
+			[
+				"aut",
+				"auto_names"
+			],
+			[
+				"au",
+				"auto_ids"
+			],
+			[
+				"nam",
+				"name_caricon_suv"
+			],
+			[
+				"na",
+				"name_caricon"
+			],
+			[
+				"ur",
+				"urls_caricon_suv"
+			],
+			[
+				"auto",
+				"autohome"
+			],
+			[
+				"fit",
+				"fit_transform"
+			],
+			[
+				"dat",
+				"datadf"
+			],
+			[
+				"x",
+				"xpath_all"
+			],
+			[
+				"xpath",
+				"xpath_all"
+			],
+			[
+				"las",
+				"last_updata_time"
+			],
+			[
+				"ip",
+				"ips_ports"
+			],
+			[
+				"R",
+				"RetryErrorResponseMiddleware"
+			],
+			[
+				"U",
+				"UnknownResponseError"
+			],
+			[
+				"te",
+				"test_return"
+			],
+			[
+				"he",
+				"header"
+			],
+			[
+				"k",
+				"keywords_list"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"ch",
+				"check_a"
+			],
+			[
+				"bl",
+				"block_info_extract"
+			],
+			[
+				"bloc",
+				"for_all_blocks_info_extract"
+			],
+			[
+				"xpath_",
+				"xpath_syn1"
+			],
+			[
+				"ke",
+				"keywords1"
+			],
+			[
+				"all",
+				"all_JCXX_url"
+			],
+			[
+				"che",
+				"check_total"
+			],
+			[
+				"reg",
+				"regulatory_info"
+			],
+			[
+				"info",
+				"info_list"
+			],
+			[
+				"RE",
+				"REDIS_PORT"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"ip_p",
+				"ip_port"
+			],
+			[
+				"proxy",
+				"proxy_ip_port"
+			],
+			[
+				"h",
+				"headers"
+			],
+			[
+				"p",
+				"pipeline"
+			],
+			[
+				"cla",
+				"classi"
+			],
+			[
+				"xpat",
+				"xpath_syn"
+			],
+			[
+				"htm",
+				"html_parse"
+			],
+			[
+				"ta",
+				"tag_str"
+			],
+			[
+				"a",
+				"a_dict"
+			],
+			[
+				"de",
+				"detail"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/dev/libsvm-3.21/python/test.py",
+			"settings":
+			{
+				"buffer_size": 358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/LENOVO/Desktop/te.py",
+			"settings":
+			{
+				"buffer_size": 1387,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/LENOVO/Desktop/to/te.html",
+			"settings":
+			{
+				"buffer_size": 1607,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/learn/python/flask/web/microblog/hello.py",
+			"settings":
+			{
+				"buffer_size": 1507,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/learn/python/flask/web/microblog/templates/report1.html",
+			"settings":
+			{
+				"buffer_size": 4238,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/learn/python/flask/web/microblog/templates/welcome.html",
+			"settings":
+			{
+				"buffer_size": 6873,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/LENOVO/Desktop/dyh/test2.html",
+			"settings":
+			{
+				"buffer_size": 24022,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/learn/python/flask/web/microblog/static/jseasyui/style/kube.css",
+			"settings":
+			{
+				"buffer_size": 46363,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 544.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path; urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read; dh = hashlib.sha256(by).hexdigest; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request, os;pf = 'Package Control.sublime-package';ipp = sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen('http://sublime.wbond.net'+ pf.replace('','%20')).read());",
+			"import urllib, os;pf = 'Package Control.sublime-package';ipp = sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen('http://sublime.wbond.net'+ pf.replace('','%20')).read());"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/learn/python/flask/web",
+		"/E/learn/python/flask/web/microblog",
+		"/E/learn/python/flask/web/microblog/static",
+		"/E/learn/python/flask/web/microblog/static/jseasyui",
+		"/E/learn/python/flask/web/microblog/static/jseasyui/style",
+		"/E/learn/python/flask/web/microblog/templates"
+	],
+	"file_history":
+	[
+		"/E/learn/python/flask/web/microblog/templates/usergroup.html",
+		"/E/learn/python/flask/web/microblog/static/rollPicture/jquery.SuperSlide.2.1.1.js",
+		"/C/Users/LENOVO/Desktop/jsmind/tree.html",
+		"/E/learn/python/flask/web/microblog/templates/tree.html",
+		"/E/learn/python/flask/web/microblog/static/creditChinaJs/esl.js",
+		"/E/learn/python/flask/web/microblog/static/creditchinajs/index.css",
+		"/E/learn/python/flask/web/microblog/static/creditChinaJs/creditsearchall.js",
+		"/E/learn/python/flask/web/microblog/templates/base.html",
+		"/E/learn/python/flask/web/microblog/templates/welcome.html",
+		"/E/learn/python/flask/web/microblog/templates/report.html",
+		"/E/learn/python/flask/web/microblog/templates/easyui.html",
+		"/E/learn/python/flask/web/microblog/templates/report1.html",
+		"/E/learn/python/flask/web/microblog/static/myjs/runjs/run_card.js",
+		"/E/learn/python/flask/web/microblog/static/myjs/search.js",
+		"/C/Users/LENOVO/Desktop/dyh/test.html",
+		"/E/learn/python/flask/web/microblog/templates/home.html",
+		"/E/learn/python/flask/web/microblog/static/myjs/runjs/run_card.css",
+		"/D/dev/maven/conf/settings.xml",
+		"/C/Users/LENOVO/Desktop/patent test.py",
+		"/E/learn/python/flask/web/fuhai/static/jseasyui/easyui/jquery.min.js",
+		"/C/Users/LENOVO/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/learn/python/flask/web/microblog/templates/muti_base.html",
+		"/E/learn/python/flask/web/microblog/templates/phone.html",
+		"/E/learn/python/flask/web/fuhai/hello.py",
+		"/E/learn/python/flask/web/microblog/templates/te.html",
+		"/E/learn/python/flask/web/microblog/app/__init__.py",
+		"/E/learn/python/flask/web/microblog/app/views.py",
+		"/E/learn/python/flask/web/microblog/run.py",
+		"/E/learn/python/flask/web/jsmind/virtualenv.py",
+		"/E/learn/python/flask/web/jsmind/templates/easyui.html",
+		"/E/learn/python/flask/web/jsmind/hello.py",
+		"/E/learn/python/flask/web/fuhai/static/myjs/search.js",
+		"/E/learn/python/flask/web/fuhai/templates/home.html",
+		"/E/learn/python/flask/web/fuhai/templates/easyui.html",
+		"/E/learn/python/flask/web/fuhai/fuhai.sublime-project",
+		"/C/Users/LENOVO/AppData/Roaming/Sublime Text 3/Packages/User/myenv_web.sublime-build",
+		"/C/Users/LENOVO/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/LENOVO/Desktop/to/test.py",
+		"/E/learn/imageRecognition/git/captchacker2/SVM_cross_validation.py",
+		"/E/learn/imageRecognition/git/crawler/common/decaptcha/model/dyh_amaz.py",
+		"/E/git/recognation/dyh_CAPTCHA-breaking/test_type6.py",
+		"/E/git/recognation/dyh_CAPTCHA-breaking/test_type5.py",
+		"/E/git/recognation/CEE/simple-verification-code-recognition/2013_scores.py",
+		"/E/git/recognation/code-identify-im/code.py",
+		"/E/git/recognation/ImageRecognizeOf58/hack58/src/ocr58.py",
+		"/E/git/recognation/njucaptcha-vim/recognizer.py",
+		"/E/git/recognation/njucaptcha-vim/inspector.py",
+		"/E/git/recognation/code-identify-im/code-GUI.py",
+		"/C/Users/LENOVO/Desktop/opencv/img.py",
+		"/E/learn/imageRecognition/git/captchacker2/test_ocr - sogou.py",
+		"/E/learn/imageRecognition/git/captchacker2/test_ocr - sogou - 1.py",
+		"/E/forlife/taglib/project/teproject/test/application.py",
+		"/E/learn/mathematics/compute/newton_method.py",
+		"/E/learn/mathematics/compute/least_square_fitting.py",
+		"/E/learn/python/wordcloud/word_cloud/examples/masked.py",
+		"/E/learn/python/wordcloud/word_cloud/examples/dyh_taglib.py",
+		"/C/Python27/Lib/site-packages/wordcloud/wordcloud.py",
+		"/E/learn/python/wordcloud/word_cloud/examples/alice_license.txt",
+		"/E/forlife/taglib/project/web/fuhai/templates/jibeninfo.html",
+		"/E/forlife/taglib/project/teproject/test/templates/hello.html",
+		"/E/forlife/taglib/切片/02微观画像-2查询.html",
+		"/E/learn/python/fuhai/hide/hideFiles/hide.py",
+		"/C/Users/LENOVO/Desktop/test.py",
+		"/C/Users/LENOVO/Desktop/abc.scala",
+		"/E/scripts/url_param.py",
+		"/E/learn/mathematics/compute/circus_areas.py",
+		"/E/sklearn/riskcontrol/chosenFeatures.py",
+		"/E/sklearn/riskcontrol/risk_tnh_lr.py",
+		"/D/dev/sbt/bin/sbt",
+		"/C/Users/LENOVO/Desktop/database.py",
+		"/E/learn/dataStructurePython/dataStructure.py",
+		"/D/dev/sbt/sbt.bat",
+		"/E/spiders/credit/credit/spiders/find_removed_person.py",
+		"/E/spiders/credit/credit/spiders/find_removed_unit.py",
+		"/E/spiders/autohome/autohome/spiders/announcement_judicial_scrapy.py",
+		"/E/spiders/specialworker/specialworker/settings.py",
+		"/E/spiders/specialworker/specialworker/spiders/openCourt.py",
+		"/E/spiders/autohome/autohome/pipelines.py",
+		"/E/spiders/autohome/autohome/spiders/car_setting_scrapy.py",
+		"/E/spiders/autohome/autohome/downloader/handlers/phantomjs.py",
+		"/C/Users/LENOVO/Desktop/a.html",
+		"/E/spiders/autohome/autohome/settings.py",
+		"/E/spiders/autohome/autohome/middlewares.py",
+		"/E/spark/xiaodai/optimize_svm_xiaodai.py",
+		"/E/spiders/specialworker/specialworker/spiders/announcement_judicial_scrapy.py",
+		"/E/spiders/credit/credit/spiders/person_incre_Scrapy.py",
+		"/E/spiders/credit/credit/spiders/unit_incre_creditScrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/all_url_judicial_scrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/detailjudicialScrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/bloom_detail_judicail_scrapy.py",
+		"/E/spiders/credit/credit/settings.py",
+		"/E/spiders/specialworker/specialworker/MyBloomFilter.py",
+		"/E/spiders/credit/credit/middlewares.py",
+		"/E/spiders/credit/credit/items.py",
+		"/E/spiders/credit/credit/pipelines.py",
+		"/E/spiders/specialworker/specialworker/spiders/urljudicialScrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/judicialopinionsScrapy.py",
+		"/E/spiders/specialworker/specialworker/SeenURLFilter.py",
+		"/E/spiders/specialworker/specialworker/middlewares.py",
+		"/C/Python27/Lib/site-packages/scrapy/dupefilter.py",
+		"/E/spiders/specialworker/specialworker/pipelines.py",
+		"/E/spiders/specialworker/specialworker/spiders/foodBeverageScrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/pharmacistScrapy.py",
+		"/E/spiders/specialworker/specialworker/spiders/specialworkerScrapy.py",
+		"/E/spark/mllib_scala/dianxiao/skb_pred_source_all_20150905.scala",
+		"/E/spark/mllib_scala/dianxiao/skb_pred_source_all_20150905.py",
+		"/E/spiders/specialworker/specialworker/items.py",
+		"/E/spiders/patenttest/patenttest/spiders/kuaidailiScrapy.py",
+		"/C/Users/LENOVO/Desktop/PyV8.py",
+		"/C/Users/LENOVO/Desktop/b.html",
+		"/E/spiders/p2pBlacklist/p2pBlacklist/spiders/dailianmeng_detail_Scrapy.py",
+		"/E/spiders/credit/credit/spiders/uniteincreditScrapy.py",
+		"/E/spark/mllib_scala/dianxiao/all_features_skb.scala",
+		"/E/spark/mllib_scala/dianxiao/skb_pred_SVM.scala",
+		"/E/spiders/patenttest/patenttest/settings.py",
+		"/E/spark/mllib/SVM/adult_UCI.py",
+		"/E/spiders/autohome/autohome/spiders/repair_data_scrapy.py",
+		"/E/spiders/autohome/autohome/xpaths.py",
+		"/E/spark/git/spark-test/src/main/scala/MySVM.scala",
+		"/E/learn/machine learning/sample_technique/python-smote/example.py",
+		"/E/learn/machine learning/sample_technique/python-smote/SMOTE.py",
+		"/E/spark/mllib_scala/skb_pred_source_all_20150905.py",
+		"/E/te.java",
+		"/E/spiders/miit/miit/items.py",
+		"/E/spiders/miit/miit/spiders/miitScrapy.py",
+		"/E/testspider/test1/test1/spiders/te_scrapy.py",
+		"/E/spiders/miit/miit/settings.py",
+		"/E/spiders/miit/miit/pipelines.py"
+	],
+	"find":
+	{
+		"height": 49.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			"E:\\learn\\python\\flask\\web"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"index",
+			"navbar-right",
+			"navbar-left",
+			"navbar",
+			"content",
+			"wrap",
+			"group",
+			"wrap",
+			"group",
+			".hd",
+			"js",
+			".js",
+			"navbar-right",
+			"navbar-left",
+			"navbar",
+			"content",
+			"header",
+			"wrap",
+			"group",
+			"-->",
+			"请输",
+			"abc",
+			"area-button",
+			"go-search",
+			"toggle-btn",
+			"toggle-btn-down",
+			"seniorButton",
+			"define",
+			"exports",
+			"initDom",
+			"searchButton",
+			"initDom",
+			"toggle-btn-up",
+			"toggle-btn-down",
+			"toggle-btn",
+			"toggle-btn-up",
+			"toggle-btn-down",
+			"优良记录",
+			"toggle-button",
+			"area-button",
+			"toggle_down",
+			"/img/toggle_down.png",
+			"/img/toggle_up.png",
+			"/img/toggle_up_hover.png",
+			"/img/toggle_down_hover.png",
+			"/img/radio_btn.png",
+			"(/",
+			"/img/radio_btn.png",
+			"/img/check_btn.png",
+			"/img",
+			"checkbox_",
+			"icon",
+			"content",
+			"lakala",
+			"navbar-1",
+			"hidden",
+			"高级",
+			"img",
+			"高级",
+			"hidden",
+			"senior-search",
+			"\\",
+			"clock",
+			"clkCls",
+			"clock",
+			"ab",
+			"\\",
+			"\\\\",
+			"\\",
+			"            ",
+			"           ",
+			"          ",
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"            ",
+			"           ",
+			"          ",
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"\\",
+			"learn",
+			"\\",
+			"255-thresh1",
+			"cv.",
+			"cv",
+			"\\",
+			"personal vault",
+			"POST",
+			"cleaned_data",
+			"frame",
+			"RandomForestClassifier",
+			"rf",
+			"predict",
+			"\\",
+			"c_data",
+			"self.",
+			"java",
+			"#!/",
+			"manu_df",
+			"cross_val_score",
+			"\\",
+			"data",
+			"path",
+			">>> ",
+			"server",
+			"\\",
+			"t_d",
+			"judicial",
+			"urls",
+			"specialworker",
+			"\\",
+			">>> ",
+			"logg",
+			"log",
+			"meta",
+			"file_haveRequested",
+			"redis",
+			"item",
+			"Scheduler",
+			"\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/dev/libsvm-3.21/python/test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/LENOVO/Desktop/te.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								318,
+								330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 518.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/LENOVO/Desktop/to/te.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 772.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/E/learn/python/flask/web/microblog/hello.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1507,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								1442,
+								1442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/E/learn/python/flask/web/microblog/templates/report1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/E/learn/python/flask/web/microblog/templates/welcome.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1825,
+								1825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 4.0,
+						"translation.y": 3197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/LENOVO/Desktop/dyh/test2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 140.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/E/learn/python/flask/web/microblog/static/jseasyui/style/kube.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14722,
+								14734
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 32635.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 41.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 241.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Run Tests",
+	"project": "fuhai.sublime-project",
+	"replace":
+	{
+		"height": 78.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\learn\\python\\flask\\web\\fuhai\\fuhai.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
