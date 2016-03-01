@@ -13,7 +13,26 @@ function submitForm(){
         data:{'q':mobile},
         datatype:'json',
         success:function(data){
-            $('#phonenum').text(data.deng);
+            eval("$('#phonenum').text(data.pk_mobile);");
+            $('#userid').text(data.pk_userid);
+            $('#name').text(data.as_name_cn);
+            $('#icard').text(data.as_idc);
+            $('#gender').text(data.an_gender);
+            $('#age').text(data.an_age);
+            $('#star').text(data.an_constel);
+            $('#nature').text(data.an_zodiac);
+            $('#bp').text(data.as_area_hukoiu_city);
+            $('#lp').text(data.as_area_live_city);
+            $('#yp').text(data.as_area_alive_city_all);
+            $('#score').text(data.as_blc_pcdt_score);
+            $('#rank').text(data.as_blc_pcdt_grade);
+            $('#bank').text(data.rf_bkc_bl);
+            $('#ternal').text(data.rt_ltrm_bl_vld);
+            $('#app').text(data.ri_lapp_bl);
+            $('#time').text(data.bh_blp_pt_cmax);
+            $('#place').text(data.bh_blp_prov_cmax);
+            $('#pwork').text(data.bh_blp_ltrm_cmax);
+            $('#record').text(data.bn_blc_discdt_bl);
             }
     });
     

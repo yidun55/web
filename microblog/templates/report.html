@@ -3,6 +3,7 @@
  <body>
 
 <style>
+
 /*
 控制表格边框
 */
@@ -41,11 +42,11 @@
 
 
  <div>
-    <form id="submitform" action="/signin" method="post">
+    <form id="submitform" action="/report" method="post">
         <table align="center">
             <tr>
                 <td><input class="easyui-textbox" data-options="prompt:'请输入手机号查看用户信息',required:true" name="q" style="width:400px;height:25px"/></td>
-                <td><!--p><button type="submit">Sign In</button></p--><a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a></td>
+                <td><a><button type="submit">提交</button></a><!--a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a--></td>
             </tr>
         </table>
     </form>
