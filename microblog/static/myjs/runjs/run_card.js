@@ -105,4 +105,4 @@ var Clock = function(prt){
 
     this.start();
 }
-        var c = new Clock(document.body);
+        // var c = new Clock(document.body);

@@ -50,8 +50,11 @@ def show_user():
 
 @app.route('/channel_record', methods=['POST'])
 def post_data():
-    print request.form, "<<<<<<<<<<<<<<<<<<<<<<<<"
-    return render_template('usergroup.html')
+    keywords = request.form['keyword']
+    if request.form['type'] == '' and not request.form.has_key("areas"):
+        se = es.search(index="label", doc_type="ulb_as_m", body={"query":{"match":{"_id":{"query":keywords,"type":"phrase"}}}})
+
+    return jsonify({"a":"2"})
 
 @app.route('/tree', methods=['GET'])
 def tree():
@@ -78,6 +81,14 @@ def user_report2():
 @app.route('/report1', methods=['GET'])
 def user_report1():
     return render_template('report1.html')
+
+
+@app.route('/test', methods=['GET'])
+def my_test():
+    print request.form, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    return " "
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

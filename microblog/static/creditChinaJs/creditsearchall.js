@@ -13,8 +13,8 @@ define(
         */
         var objectMap = {
             '全部': '',
-            '自然人': 1,
-            '法人': 2
+            '男': 1,
+            '女': 2
         };
         /**
          * 信用记录的map
@@ -277,6 +277,7 @@ define(
                     var $item = $(item);
 
                     if (!$item.hasClass('search_btn_active')) {
+                        //alert("abc")
                         arrText.push($.trim($item.text()));
                     }
                 });
@@ -369,6 +370,7 @@ define(
             var postData = getPostData();
             var sendURL = getAjaxURL();
             if (isFirst) {
+                //isFirst = false;
                 isFirst = false;
                 // common.bindHashChange(hashHandler);
             }
@@ -382,6 +384,7 @@ define(
                 dataType: 'text',
                 data: postData,
                 complete: function (jqXHR, status) {
+                    var c = new Clock(document.body); //dyh did it
                     var success = (status === 'success');
                     if (!success) {
                         return;
