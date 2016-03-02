@@ -69,7 +69,7 @@ define(
             var $this = $(this);
             $this.siblings().removeClass('search_btn_active');
             $this.addClass('search_btn_active');
-            $searchButton.trigger('click');
+            //$searchButton.trigger('click');
         });
         $('.checkbox_btn').click(function () {
             var $this = $(this);
@@ -384,7 +384,6 @@ define(
                 dataType: 'text',
                 data: postData,
                 complete: function (jqXHR, status) {
-                    createCountUp()
                     var success = (status === 'success');
                     if (!success) {
                         return;
@@ -396,8 +395,10 @@ define(
                         return;
                     }
 
+                    
                     var json = $.parseJSON(data);
                     //alert(json['a'])
+                    createCountUp(json['total']);
                     successHandler(json, pageNumber);
 
 
@@ -412,25 +413,10 @@ define(
                 reBindHashChange(pageNumber);
             }
 
-            if (selectType === '2') {
-                if ($.trim($('#keyword').val()) === '') {
-                    $('#search-count').html('<span class="red-tip">请输入文章关键词</span>');
-                    return false;
-                }
-            }
-            else if (selectType === '1') {
-                if ($.trim($('#keyword').val()).length === 1) {
-                    $('#search-count').html('<span class="red-tip">搜索关键词不得少于２个字符</span>');
+            if ($.trim($('#keyword').val()).length < 2) {
+                $('#search-count').html('<span class="red-tip">搜索关键词不得少于２个字符</span>');
 
-                    return false;
-                }
-            }
-            else {
-                if ($.trim($('#keyword').val()).length < 2) {
-                    $('#search-count').html('<span class="red-tip">搜索关键词不得少于２个字符</span>');
-
-                    return false;
-                }
+                return false;
             }
 
             paginationEvent(1);

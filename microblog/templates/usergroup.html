@@ -358,7 +358,7 @@
         options = {
             useEasing : useEasing, // toggle easing
             easingFn : easingFn, // defaults to easeOutExpo, but you can specify your own
-            useGrouping : useGrouping, // 1,000,000 vs 1000000
+            useGrouping : useGrouping, // 1,000,000 vs createCountUp0000
             separator : ',', // character to use as a separator
             decimal : '.', // character to use as a decimal
         };
@@ -395,9 +395,9 @@
 
 
 
-    function createCountUp() {
+    function createCountUp(terminate) {
         var startVal = 0
-        var endVal = 100
+        var endVal = terminate
         var decimals = 0,
             duration = 2.5,
             prefix = "",
