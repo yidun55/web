@@ -7,8 +7,8 @@ from flask import Flask, render_template
 from tools import report
 
 #建立elasticsearch连接
-from elasticsearch import Elasticsearch
-es = Elasticsearch(["10.1.60.132", "10.1.60.133"])
+# from elasticsearch import Elasticsearch
+# es = Elasticsearch(["10.1.60.132", "10.1.60.133"])
 
 
 
@@ -33,15 +33,15 @@ def signin_form():
 @app.route('/signin', methods=['POST'])
 def signin():
     # 需要从request对象读取表单内容：
-    if request.form['q']!='':
-        search_index = request.form['q']
-        se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
-        all_el = {}
-        for hit in se['hits']['hits']:
-            all_el.update(hit['_source'])
-        # result = jsonify(all_el)
-        # return render_template('phone.html', results=result)
-        return jsonify(all_el)
+    # if request.form['q']!='':
+    #     search_index = request.form['q']
+    #     se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+    #     all_el = {}
+    #     for hit in se['hits']['hits']:
+    #         all_el.update(hit['_source'])
+    #     # result = jsonify(all_el)
+    #     # return render_template('phone.html', results=result)
+    #     return jsonify(all_el)
     return '<h3>Bad username or password.</h3>'
 
 @app.route('/usergroup', methods=['GET'])
@@ -50,9 +50,9 @@ def show_user():
 
 @app.route('/channel_record', methods=['POST'])
 def post_data():
-    keywords = request.form['keyword']
-    if request.form['type'] == '' and not request.form.has_key("areas"):
-        se = es.search(index="label", doc_type="ulb_as_m", body={"query":{"match":{"_id":{"query":keywords,"type":"phrase"}}}})
+    # keywords = request.form['keyword']
+    # if request.form['type'] == '' and not request.form.has_key("areas"):
+    #     se = es.search(index="label", doc_type="ulb_as_m", body={"query":{"match":{"_id":{"query":keywords,"type":"phrase"}}}})
 
     return jsonify({"a":"2"})
 
@@ -67,15 +67,15 @@ def user_report():
 @app.route('/report', methods=['POST'])
 def user_report2():
     # 需要从request对象读取表单内容：
-    if request.form['q']!='':
-        search_index = request.form['q']
-        se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
-        all_el = {}
-        for hit in se['hits']['hits']:
-            all_el.update(hit['_source'])
-        result = all_el
-        result = report.three_edu(result)   #挑三个最高的教育经历
-        return render_template('report1.html', results=result)
+    # if request.form['q']!='':
+    #     search_index = request.form['q']
+    #     se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+    #     all_el = {}
+    #     for hit in se['hits']['hits']:
+    #         all_el.update(hit['_source'])
+    #     result = all_el
+    #     result = report.three_edu(result)   #挑三个最高的教育经历
+    #     return render_template('report1.html', results=result)
     return '<h3>Bad username or password.</h3>'
 
 @app.route('/report1', methods=['GET'])
@@ -83,10 +83,6 @@ def user_report1():
     return render_template('report1.html')
 
 
-@app.route('/test', methods=['GET'])
-def my_test():
-    print request.form, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    return " "
 
 
 

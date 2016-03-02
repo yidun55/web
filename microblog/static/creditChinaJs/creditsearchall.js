@@ -384,7 +384,7 @@ define(
                 dataType: 'text',
                 data: postData,
                 complete: function (jqXHR, status) {
-                    var c = new Clock(document.body); //dyh did it
+                    createCountUp()
                     var success = (status === 'success');
                     if (!success) {
                         return;
@@ -395,29 +395,11 @@ define(
                         // console.log("无数据");
                         return;
                     }
-                    if (selectType === '2') {
-                        $('#search-count').html('当前搜索关键字为：<span class="blue" id="keywordText">'
-                            + $.trim($('#keyword').val()) + '</span>');
-                        $('.article-media-list').removeClass('hidden');
-                        $('.article-media-list').html(data);
 
-                        if (typeof G_pageSum !== undefined && G_pageSum > 1) {
-                            $('#pagination').show();
-                            $('#pagination').pagination({
-                                hrefTextPrefix: '#keyword=' + $.trim($('#keyword').val())
-                                        + '&selectType=' + selectType + '&page=',
-                                pages: G_pageSum
+                    var json = $.parseJSON(data);
+                    //alert(json['a'])
+                    successHandler(json, pageNumber);
 
-                            }).pagination('selectPage', pageNumber);
-
-                        }
-                        common.bindHashChange(hashHandler);
-                    }
-                    else {
-                        var json = $.parseJSON(data);
-
-                        successHandler(json, pageNumber);
-                    }
 
                 }
 
