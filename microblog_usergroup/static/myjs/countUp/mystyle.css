@@ -1,0 +1,30 @@
+#wrap {
+    width:981px;
+    margin:0 auto -25px auto;
+    text-align: left;
+    overflow:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+h1.jumbo {
+    font-size:12em;
+    margin:0;
+    color:#4d63bc;
+    font-size:8em;
+    font-family:'Source Sans Pro', Helvetica, Arial, sans-serif;
+    text-align:center;
+    position:relative;
+}
+
+.inlineLeft {
+    float:left;
+    display:inline;
+    margin-bottom:10px;
+}
+
+.marginLeft { margin-left:20px !important }
+
+.marginRight { margin-right:20px !important }
+

@@ -40,7 +40,7 @@ def signin():
     # 需要从request对象读取表单内容：
     if request.form['q']!='':
         search_index = request.form['q']
-        se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+        se = es.search(index="label_1", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
         all_el = {}
         for hit in se['hits']['hits']:
             all_el.update(hit['_source'])
@@ -58,31 +58,27 @@ def post_data():
     keywords = request.form['keyword']
     if request.form['type'] == '' and not request.form.has_key("areas"):
         w_key = keywords  + "*"
-        se = es.search(index="label", doc_type="ulb_as_m", body={"query":{"wildcard": {"pk_mobile": w_key}}})
+        se = es.search(index="label_1", doc_type="ulb_collect_all", body={"query":{"wildcard": {"pk_mobile": w_key}}})
         total = se['hits']['total']
         return jsonify({"total":total})
     if request.form['type'] != "" and not request.form.has_key("areas"):
         w_key = keywords  + "*"
         print w_key, "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-        query_body = """{
-                "query":
-                    {
-                        "bool" : {
-                             "must" : [
-                            { "term" : {"_id":"%s"} },
-                            { "term" : {"an_gender":"%s"} }             
-                            ]
-                      }
-                    }
+        query_body = """{"query":{"bool":{"must":[
+            {"query_string" : {"default_field" : "pk_mobile","query" : "%s"}},
+            { "term" : {"an_gender":"%s"}}
+            ]}
+            }
             }"""
         if request.form['type'] == "1":
             gender = "男"
+            print "men working>>>>>>>>>>>>>>>>>>>"
             query_body = query_body%(w_key, gender)
         else:
             gender = "女"
             query_body = query_body%(w_key, gender)
 
-        se = es.search(index='label', doc_type='ulb_an_m', body=eval(query_body))
+        se = es.search(index='label_1', doc_type='ulb_collect_all', body=eval(query_body))
         total = se['hits']['total']
         return jsonify({"total":total})
 
@@ -99,11 +95,17 @@ def user_report2():
     # 需要从request对象读取表单内容：
     if request.form['q']!='':
         search_index = request.form['q']
-        se = es.search(index="label", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+        se = es.search(index="label_1", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
         all_el = {}
         for hit in se['hits']['hits']:
             all_el.update(hit['_source'])
         result = all_el
+        for key in result.iterkeys():
+            if result[key] == None:
+                result[key] = ""
+            else:
+                pass
+                
         result = report.three_edu(result)   #挑三个最高的教育经历
         return render_template('report1.html', results=result)
     return '<h3>Bad username or password.</h3>'

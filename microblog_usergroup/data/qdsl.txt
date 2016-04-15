@@ -1,0 +1,1 @@
+{"query": {"bool": {"must": [{"range": {"blf_qb_acin_amt_mavg_3m": {"to": 2.0, "from": 2.0}}}]}}}

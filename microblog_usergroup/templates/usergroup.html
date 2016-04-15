@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script src="static/usergroup/js/jquery.js" type="text/javascript"></script>
+    <script src="static/usergroup/js/jquery-ui.custom.js" type="text/javascript"></script>
+
+    <link href="static/usergroup/css/ui.fancytree.css" rel="stylesheet" type="text/css">
+    <script src="static/usergroup/js/jquery.fancytree.js" type="text/javascript"></script>
+    <script type="text/javascript" src="static/usergroup/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="static/usergroup/myjs/getData.js"></script>
+    <script type="text/javascript" src="static/usergroup/myjs/show.js"></script>
+
+
+    <!-- 引入kube.css for导航 -->
+    <link id="easyuiTheme" rel="stylesheet" href='static/jseasyui/style/kube.css' type="text/css">
+    <link id="easyuiTheme" rel="stylesheet" href='static/jseasyui/style/main.css' type="text/css">
+    <title>用户标签平台</title>
+
+<style type="text/css">
+body {
+    background-color: #39414A;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: smaller;
+    background-image: url("nav_bg.png");
+    background-repeat: repeat-x;
+}
+
+div#tree {
+    float:left;
+    height: 95%;
+    width: 15%;
+    padding: 5px;
+    margin-right: 16px;
+}
+
+ul.fancytree-container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+span.fancytree-title {
+    color: white;
+    text-decoration: none;
+}
+span.fancytree-focused span.fancytree-title {
+    outline-color: white;
+}
+span.fancytree-node:hover span.fancytree-title,
+span.fancytree-active span.fancytree-title,
+span.fancytree-active.fancytree-focused span.fancytree-title,
+.fancytree-treefocus span.fancytree-title:hover,
+.fancytree-treefocus span.fancytree-active span.fancytree-title {
+    color: #39414A;
+}
+span.external span.fancytree-title:after {
+    content: "";
+    padding-right: 13px;
+}
+/* Remove system outline for focused container */
+.ui-fancytree.fancytree-container:focus {
+    outline: none;
+}
+.ui-fancytree.fancytree-container {
+    border: none;
+}
+</style>
+<script type="text/javascript">
+<!--
+    $(function(){
+/*****************checkbox事件begin**********************/
+        $("input[name^='box_']").click(function(){//所有前缀是box_的是复选框
+            var name = this.name.replace("box_","");
+            var str="-";   //用于页面左边框的显示
+            var valStr = "-";   //用于向后台传递数据
+            $("input[name='" + this.name + "']:checked").each(function(){
+                str += "," + $(this).attr('value');
+            });       
+            if(str != "-") {
+                $("div[name='req_" + name + "']").show();
+                $("div[name='req_" + name + "']").html(name + " : " + str.replace("-,",""));
+            } else {
+                $("div[name='req_" + name + "']").hide();
+            }
+        });
+/*****************checkbox事件end**********************/
+
+})
+//-->
+
+</script>
+<script type="text/javascript">
+    $(function(){
+        // --- Initialize sample trees
+        $("#tree").fancytree({
+            autoActivate: false, // we use scheduleAction()
+            autoCollapse: true,
+//          autoFocus: true,
+            autoScroll: true,
+            clickFolderMode: 3, // expand with single click
+            minExpandLevel: 2,
+            tabbable: false, // we don't want the focus frame
+            // scrollParent: null, // use $container
+            focus: function(event, data) {
+                var node = data.node;
+                // Auto-activate focused node after 1 second
+                if(node.data.href){
+                    node.scheduleAction("activate", 1000);
+                }
+            },
+            blur: function(event, data) {
+                data.node.scheduleAction("cancel");
+            },
+            activate: function(event, data){
+                var node = data.node,
+                    orgEvent = data.originalEvent;
+
+                if(node.data.href){
+                    window.open(node.data.href, (orgEvent.ctrlKey || orgEvent.metaKey) ? "content" : node.data.target);
+                }
+            },
+            click: function(event, data){ // allow re-loads
+                var node = data.node,
+                orgEvent = data.originalEvent;
+                //alert(node.key);
+                if(node.isActive() && node.data.href){
+                    //alert(data.node.data.href);
+                    window.open(node.data.href, (orgEvent.ctrlKey || orgEvent.metaKey) ? "content" : node.data.target);
+                } else if(data.node.data.target =="DivEvent"){
+                    show(node.title, loadData());
+                }
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    //window加载时自动加载页面显示的数据
+    window.onload = testLoadData;
+</script>
+
+</head>
+
+<body>
+
+  <!-- 导航栏 -->
+  <div id="header" class="group wrap header">
+              <div class="content">
+      <div id="elogo" class="navbar navbar-left">
+          <ul>
+              <li>
+              <a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}"><img src="{{
+      url_for('static', filename='figure/background/lakala_new.png')
+      }}" width="200" height="60" alt="jQuery EasyUI"/></a>
+              </li>
+          </ul>
+      </div>
+      <div id="navbar-1" class="navbar navbar-right">
+          <ul>
+              <li><a href="/">首页</a></li>
+              <li><a href="/signin">用户标签</a></li>
+              <li><a href="/usergroup">用户群体探查</a></li>
+              <li><a href="/tree">标签库</a></li>
+              <li><a href="/report">用户报告</a></li>
+              <li><a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}">联系我们</a></li>
+          </ul>
+      </div>
+  </div>
+  </div>
+
+
+
+
+    <div id="tree">
+        <ul>
+            <li class="folder expanded"> 标签分类
+                <ul>
+
+                    <li class="folder expanded">用户属性
+                        <ul>
+                        <li><a target="DivEvent">自然属性</a>
+                        <li><a target="DivEvent">社会属性</a>
+                        </ul>
+                    <li class="folder expanded">用户资源
+                        <ul>
+                        <li><a target="DivEvent">金融资产</a>
+                        <li><a target="DivEvent">有形物资</a>
+                        <!--li><a target="DivEvent">虚拟资产</a-->
+                        </ul>
+                    <li class="folder expanded">用户行为
+                        <ul>
+                        <li><a target="DivEvent">行为习惯</a>
+                        <li><a target="DivEvent">行为方式</a>
+                        <li><a target="DivEvent">日常消费</a>
+                        <li><a target="DivEvent">金融理财</a>
+                        <li><a target="DivEvent">出行行为</a>
+                        <li><a target="DivEvent">娱乐行为</a>
+                        <li><a target="DivEvent">异常行为</a>
+                        </ul>
+                    <li class="folder expanded">拉卡拉业务
+                        <ul>
+                        <li><a target="DivEvent">拉卡拉便民</a>
+                        <li><a target="DivEvent">拉卡拉金融</a>
+                        <!--li><a target="DivEvent">拉卡拉收单</a-->
+                        </ul>
+                </ul>
+
+        </ul>
+    </div>
+    <div style="float:left; width:55%; height:100px;">
+        <form>
+            <div style="float:left; width:100%; height:50px; border:2px solid #ffffFF;margin-top:16px;" id="query" >
+                <ul>
+                    <span><input type="button" value="开始查询" onclick="submit1(window.parameter)"></span>
+                </ul>
+            </div>
+            <div style="float:left; width:100%; height:100px; border:2px solid #ffffFF;margin-top:16px;" id="main" name="nav_bg.png">
+                <ul>
+                    <span>请选择查询条件</span>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <div id='leftBox' style="float:left; width:15%; border:2px solid #ffffFF;margin-left: 16px;margin-top: 16px">
+    查询结果：<span id='num'>_____</span> 人<br/>
+    <p>&nbsp;
+    <p>&nbsp;
+    <p>&nbsp;
+    查询条件——<br/>
+    <p>
+    </div>
+</body>
+</html>

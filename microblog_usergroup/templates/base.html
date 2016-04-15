@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jseasyui/easyui/themes/default/easyui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}">
+    <script type="text/javascript" src="{{
+      url_for('static', filename='jseasyui/easyui/jquery.min.js')
+      }}"></script>
+    <script type="text/javascript" src="{{
+      url_for('static', filename='jseasyui/easyui/jquery.easyui.min.js')
+      }}"></script>
+
+    <!-- 引入jquery扩展 -->
+    <script src="{{
+      url_for('static', filename='jseasyui/syExtJquery.js')
+      }}" type="text/javascript" charset="utf-8"></script>
+
+
+    <!-- 引入EasyUI -->
+    <link id="easyuiTheme" rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/easyui/themes/bootstrap/easyui.css')
+      }}" type="text/css">
+
+    <!-- 引入kube.css for导航 -->
+    <link id="easyuiTheme" rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/style/kube.css')
+      }}" type="text/css">
+    <link id="easyuiTheme" rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/style/main.css')
+      }}" type="text/css">
+    <!--link id="easyuiTheme" rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/style/welcome.css')
+      }}" type="text/css"-->
+
+
+    <!-- <link rel="stylesheet" href="<%=contextPath%>/external/jquery-easyui-1.3.4/themes/icon.css" type="text/css"> -->
+    <script type="text/javascript" src="{{
+      url_for('static', filename='jseasyui/jquery.easyui.min.js')
+      }}" charset="utf-8"></script>
+    <script type="text/javascript" src="{{
+      url_for('static', filename='jseasyui/easyui/locale/easyui-lang-zh_CN.js')
+      }}" charset="utf-8"></script>
+    <!-- 引入EasyUI Portal插件 -->
+    <link rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/jquery-easyui-portal/portal.css')
+      }}" type="text/css">
+    <script type="text/javascript" src="{{
+      url_for('static', filename='jseasyui/jquery-easyui-portal/jquery.portal.js')
+      }}" charset="utf-8"></script>
+    <!-- 引入easyui扩展 -->
+    <script src="{{
+      url_for('static', filename='jseasyui/syExtEasyUI.js')
+      }}" type="text/javascript" charset="utf-8"></script>
+
+    <!-- 引入扩展图标 -->
+    <link rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/style/syExtIcon.css')
+      }}" type="text/css">
+
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="{{
+      url_for('static', filename='jseasyui/style/syExtCss.css')
+      }}" type="text/css">
+
+    <!-- 引入javascript扩展 -->
+    <script src="{{
+      url_for('static', filename='jseasyui/syExtJavascript.js')
+      }}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+{% block content %}
+        <!--form id="submitform" action="/signin" method="post">
+            <table align="center">
+                <tr>
+                    <td><input class="easyui-textbox" data-options="prompt:'请输入手机号查看用户信息',required:true" name="q" style="width:400px;height:25px"/></td>
+                    <td><p><button type="submit">Sign In</button></p></td>
+                </tr>
+            </table>
+        </form-->
+      <form action="/signin" method="post">
+             <p><input name="q"></p>
+             <p><button type="submit">Sign In</button></p>
+             </form>
+{% endblock %}
+</body>
+</html>

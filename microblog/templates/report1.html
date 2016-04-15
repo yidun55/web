@@ -84,7 +84,7 @@
        </tr>
  </table>
  <br><br>
- <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+ <!--table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
        <tr>
           <td colspan=4 align=center>教育经历</td>
        </tr>
@@ -94,24 +94,24 @@
           <th width=200>毕业院校</th>
           <th width=200>时间</th>
        </tr>
-          <td height=25>{{ results['t_edu0'][0] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu0'][1] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu0'][2] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu0'][3] }}</td><!--此处从数据库取值-->
+          <td height=25>{{ results['t_edu0'][0] }}</td>
+          <td height=25>{{ results['t_edu0'][1] }}</td>
+          <td height=25>{{ results['t_edu0'][2] }}</td>
+          <td height=25>{{ results['t_edu0'][3] }}</td>
        </tr>
        </tr>
-          <td height=25>{{ results['t_edu1'][0] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu1'][1] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu1'][2] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu1'][3] }}</td><!--此处从数据库取值-->
+          <td height=25>{{ results['t_edu1'][0] }}</td>
+          <td height=25>{{ results['t_edu1'][1] }}</td>
+          <td height=25>{{ results['t_edu1'][2] }}</td>
+          <td height=25>{{ results['t_edu1'][3] }}</td>
        </tr>
        </tr>
-          <td height=25>{{ results['t_edu2'][0] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu2'][1] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu2'][2] }}</td><!--此处从数据库取值-->
-          <td height=25>{{ results['t_edu2'][3] }}</td><!--此处从数据库取值-->
+          <td height=25>{{ results['t_edu2'][0] }}</td>
+          <td height=25>{{ results['t_edu2'][1] }}</td>
+          <td height=25>{{ results['t_edu2'][2] }}</td>
+          <td height=25>{{ results['t_edu2'][3] }}</td>
        </tr>
- </table>
+ </table-->
  <br><br>
  <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
        <tr>
@@ -161,7 +161,7 @@
        <tr>
           <td rowspan=2>拉卡拉钱包</td>
           <td width=200>开户日期</td>
-          <td height=25 width=200>{{ results['rf_lqb_acon_date'] }}</td><!--此处从数据库取值-->
+          <td height=25 width=200>{{ results['rf_lqp_acno_date'] }}</td><!--此处从数据库取值-->
        </tr>
        <tr>
           <td>账户余额</td>
@@ -229,7 +229,7 @@
  <h3><center>用户行为<center></h3>
  <p align=left>用户行为习惯：<br>
  最常交易时段：{{ results['bh_blp_pt_cmax'] }}<br>
- 最常交易星期：<br>
+ 最常交易星期：{{ results['bh_blp_wk_cmax'] }}<br>
  最常交易日期：<br>
  最常交易地点：{{ results['bh_blp_prov_lst'] }}<br>
  最常使用终端：{{ results['bh_blp_ltrm_cmax'] }}<br>

@@ -1,0 +1,427 @@
+{% extends "base.html" %}
+ {% block content %}
+ <body>
+
+<style>
+
+/*
+控制表格边框
+*/
+  table td,table th{border:1px solid black;}
+  table{
+      border-collapse:collapse;
+  border-spacing:0;
+  }
+</style>
+
+  <!-- 导航栏 -->
+  <div id="header" class="group wrap header">
+              <div class="content">
+      <div id="elogo" class="navbar navbar-left">
+          <ul>
+              <li>
+              <a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}"><img src="{{
+      url_for('static', filename='figure/background/lakala_new.png')
+      }}" width="200" height="60" alt="jQuery EasyUI"/></a>
+              </li>
+          </ul>
+      </div>
+      <div id="navbar-1" class="navbar navbar-right">
+          <ul>
+              <li><a href="/">首页</a></li>
+              <li><a href="/signin">用户标签</a></li>
+              <li><a href="/usergroup">用户群体探查</a></li>
+              <li><a href="/tree">标签库</a></li>
+              <li><a href="/report">用户报告</a></li>
+              <li><a href="{{ url_for('static',filename='jseasyui/easyui/themes/icon.css') }}">联系我们</a></li>
+          </ul>
+      </div>
+  </div>
+  </div>
+
+
+
+ <div>
+    <form id="submitform" action="/report" method="post">
+        <table align="center">
+            <tr>
+                <td><input class="easyui-textbox" data-options="prompt:'请输入手机号查看用户信息',required:true" name="q" style="width:400px;height:25px"/></td>
+                <td><a><button type="submit">提交</button></a><!--a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a--></td>
+            </tr>
+        </table>
+    </form>
+</div>
+ <div style="margin-left:auto;margin-right:auto;text-align:center;width:820px;border:2px #efefef solid">
+ <h3><center>用户基本信息<center></h3>
+ <table algin=center>
+       <tr>
+          <td>手机号：</td><td width=100></td><!--此处从数据库取值-->
+          <td>身份证号：</td><td width=100></td><!--此处从数据库取值-->
+          <!--td>拉卡拉用户ID：</td><td width=100></td--><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td colspan=4 align=center>基本信息</td>
+       </tr>
+       <tr>
+          <td width=200>姓名：</td><td width=200></td><!--此处从数据库取值-->
+          <td width=200>出生地：</td><td width=200></td><!--此处从数据库取值-->
+       </tr>
+          <td width=200>性别：</td><td width=200></td><!--此处从数据库取值-->
+          <td width=200>居住地：</td><td width=200></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td width=200>出生日期：</td><td width=200></td><!--此处从数据库取值-->
+          <td width=200>婚姻状况：</td><td width=200></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td width=200>座机号：</td><td width=200></td><!--此处从数据库取值-->
+          <td width=200>邮箱：</td><td width=200></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td width=200>微信：</td><td width=200></td><!--此处从数据库取值-->
+          <td width=200>联系地址：</td><td width=200></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td colspan=4 align=center>教育经历</td>
+       </tr>
+       <tr>
+          <th width=200>学历</th>
+          <th width=200>专业</th>
+          <th width=200>毕业院校</th>
+          <th width=200>时间</th>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td colspan=4 align=center>工作经历</td>
+       </tr>
+       <tr>
+          <th width=200>单位名城</th>
+          <th width=200>职位</th>
+          <th width=200>工作时间</th>
+          <th width=200>薪酬</th>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <h3><center>用户资产<center></h3>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <!--td rowspan=14 width=200>金融资产</td-->
+          <td rowspan=12 width=200>金融资产</td>
+          <td rowspan=6 width=200>银行资产</td>
+          <td width=200>银行卡张数</td>
+          <td height=25 width=200></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>银行卡余额</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>货记卡张数</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>借记卡张数</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>借记卡开户行</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>货记卡开户行</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td rowspan=2>拉卡拉钱包</td>
+          <td width=200>开户日期</td>
+          <td height=25 width=200></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>账户余额</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td rowspan=4>拉卡拉理财</td>
+          <td width=200>理财账户开户日期</td>
+          <td height=25 width=200></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>理财账户余额</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>基金账户开户日期</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>基金账户余额</td>
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <!--tr>
+          <td rowspan=2>信贷</td>
+          <td width=200>贷款总额</td>
+          <td height=25 width=200></td>
+       </tr>
+       <tr>
+          <td>未偿还金额</td>
+          <td height=25></td>
+       </tr-->
+       <tr>
+          <td rowspan=3>终端设备</td>
+          <td>设备类型</td>
+          <td colspan=2 height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>开通日期</td>
+          <td colspan=2 height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>是否有效</td>
+          <td colspan=2 height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td rowspan=2>手机设备</td>
+          <td>手机型号</td>
+          <td colspan=2 height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td>操作系统</td>
+          <td colspan=2 height=25></td><!--此处从数据库取值-->
+       </tr>
+       <!--tr>
+          <td rowspan=2>APP</td>
+          <td>版本</td>
+          <td colspan=2 height=25></td>
+       </tr>
+       <tr>
+          <td>激活日期</td>
+          <td colspan=2 height=25></td>
+       </tr-->
+ </table>
+ <br><br>
+ <h3><center>用户行为<center></h3>
+ <p align=left>用户行为习惯：<br>
+ 最常交易时段：<br>
+ 最常交易星期：<br>
+ 最常交易日期：<br>
+ 最常交易地点：<br>
+ 最常使用终端：<br>
+ 最常使用业务：<br>
+ </p>
+ <br><br>
+ <p align=left>日常消费<br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+        <tr>
+           <td width=200>消费类型</td>
+           <td width=200>总计消费次数</td>
+           <td width=200>总计消费金额</td>
+           <td width=200>月均消费金额</td>
+        </tr>
+        <tr>
+           <td>水费</td>
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+        </tr>
+        <tr>
+           <td>电费</td>
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+        </tr>
+        <tr>
+           <td>煤气费</td>
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+           <td height=25></td><!--此处从数据库取值-->
+        </tr>
+ </table>
+ <br><br>
+ <p align=left>拉卡拉电商<br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td width=270>品类</td>
+          <td width=270>次数</td>
+          <td width=270>金额</td>
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <p align=left>金融理财<br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td width=200>信用卡还款次数</td>
+          <td width=200>信用卡还款月均金额</td>
+          <td width=200>转账汇款次数</td>
+          <td width=200>转账汇款次均金额</td>
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td colspan=4 align=center>理财购买记录</td>
+       </tr>
+       <tr>
+          <td width=200>产品</td>
+          <td width=200>购买时间</td>
+          <td width=200>到期时间</td>
+          <td width=200>购买金额</td>
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td colspan=4 align=center>贷款申请记录</td>
+       </tr>
+       <tr>
+          <td width=200>产品</td>
+          <td width=200>申请时间</td>
+          <td width=200>批贷时间</td>
+          <td width=200>贷款金额</td>
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       </tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <p align=left>出行行为<br>
+ <table border=1 cellspacing=0 align=center  bordercolor="#FFFFFF">
+       <tr>
+          <td width=200>火车票次数</td>
+          <td width=200>火车票次均金额</td>
+          <td width=200>机票购买次数</td>
+          <td width=200>机票次均金额</td>
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br>
+ <p align=left>娱乐行为<br>
+ <table border=1 cellspacing=0 align=left bordercolor="#FFFFFF">
+       <tr>
+          <td width=200>彩票购买次数</td>
+          <td width=200>彩票中奖次数</td>
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br><br>
+ <h3><center>诚信记录<center></h3>
+ <table>
+       <tr>
+          <td width=200>个人信用评分：</td width=200><td><td><!--此处从数据库取值-->
+          <td width=200>个人信用等级：</td width=200><td><td><!--此处从数据库取值-->
+          <td width=200>商户信用评分：</td width=200><td><td><!--此处从数据库取值-->
+          <td width=200>商户信用评分：</td width=200><td><td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ <br>
+ <table border=1 cellspacing=0 align=left bordercolor="#FFFFFF">
+       <tr>
+          <td width=400>不良记录</td>
+          <td width=400>记录时间</td>
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+       <tr>
+          <td height=25></td><!--此处从数据库取值-->
+          <td height=25></td><!--此处从数据库取值-->
+       </tr>
+ </table>
+ </div>
+</body>
+ {% endblock %}
