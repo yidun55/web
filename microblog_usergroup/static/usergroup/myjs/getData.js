@@ -432,3 +432,19 @@ function isNum(input){
 }
 
 
+
+/***********************************************
+点中标签名，将所有标签都选中
+'***********************************************/
+function chooseAll(input){
+    var a = $(input).siblings("input");
+    a.each(function(){
+      var tType = $(this).attr("type");
+      var isChecked = $(this).attr("checked");       //checkbox是否选中
+      if(tType=='checkbox' && isChecked!='checked'){
+          // alert($(this).attr('value'));
+          $(this).attr("checked", true);
+          checkBox(this);  //选中未选中的checkbox
+      }
+    });
+}

@@ -39,7 +39,7 @@ function show(para, data) {
     if(para in data && document.getElementById(para)==undefined){
         var key = para;
         var myDiv = document.createElement("div");
-        myDiv.style = "float:left; width:100%; border:2px solid #ffffFF;margin-top:16px;display:none;height:1000px;overflow-y:scroll";
+        myDiv.style = "float:left; width:100%; border:2px solid #ffffFF;margin-top:16px;display:none;height:700px;overflow-y:scroll";
         myDiv.id = key;
         myDiv.setAttribute("name", "mid");
         var myUl = document.createElement("ul");
@@ -48,6 +48,7 @@ function show(para, data) {
             var values = data[key][key1]['value'];
             var myLi = document.createElement('li');
             var mySpan1 = document.createElement('span');
+            mySpan1.setAttribute("onclick", 'chooseAll(this)');   //选中所有checkbox
             mySpan1.innerHTML = key1 + ": ";
             myLi.appendChild(mySpan1);
             if(flag=='checkbox'){      

@@ -10,12 +10,12 @@ from flask import jsonify
 from flask import request
 from flask import Flask, render_template
 
-from tools import report,userGroup
+from tools import report,userGroup, yxt
 
 #建立elasticsearch连接
 from elasticsearch import Elasticsearch
-es = Elasticsearch(["10.1.60.132", "10.1.60.133"])
-
+es = Elasticsearch(["10.1.80.74", "10.1.80.75"])
+myindex = "label"
 
 
 app = Flask(__name__)
@@ -41,7 +41,7 @@ def signin():
     # 需要从request对象读取表单内容：
     if request.form['q']!='':
         search_index = request.form['q']
-        se = es.search(index="label_1", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+        se = es.search(index=myindex, body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
         all_el = {}
         for hit in se['hits']['hits']:
             all_el.update(hit['_source'])
@@ -74,10 +74,17 @@ def ajaxGetUG():
         parPath = os.getcwd()
         pathTag = parPath + "/data/test_tag.txt"
         finalData = userGroup.tranform_checkbox_2_es(pathTag, final)
-        print finalData, "<<<<<<<<<<<<<<<<<<<"
+        # print finalData, "<<<<<<<<<<<<<<<<<<<"
 
         qDsl = userGroup.query_dsl(finalData)
-        se = es.search(index="label_1", doc_type="ulb_collect_all", body=qDsl)
+        parPath = os.getcwd()
+        pathQdsl = parPath + "/data/qdsl.txt"
+        f = open(pathQdsl, "w")
+        f.write(qDsl)
+        f.close()
+
+        qDsl = userGroup.query_dsl(finalData)
+        se = es.search(index=myindex, doc_type="ulb_collect_all", body=qDsl)
         parPath = os.getcwd()
         pathQdsl = parPath + "/data/qdsl.txt"
         f = open(pathQdsl, "w")
@@ -148,12 +155,14 @@ def user_report2():
     # 需要从request对象读取表单内容：
     if request.form['q']!='':
         search_index = request.form['q']
-        se = es.search(index="label_1", body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
+        se = es.search(index=myindex, body={"query":{"match":{"_id":{"query":search_index,"type":"phrase"}}}})
         all_el = {}
         for hit in se['hits']['hits']:
             all_el.update(hit['_source'])
         result = all_el
-        result = report.three_edu(result)   #挑三个最高的教育经历
+        result = report.os_null(result)   #替换操作系统和空值
+        result = report.blf_tnh_loan_amt_lst(result)  #处理 替你还当前贷款金额
+        result = report.to_yuan(result)  #分转换成元
         return render_template('report1.html', results=result)
     return '<h3>Bad username or password.</h3>'
 
@@ -161,9 +170,32 @@ def user_report2():
 def user_report1():
     return render_template('report1.html')
 
+#临时需求,两个type同时查询并按时间排序
+@app.route("/yxt", methods=['GET'])
+def yxt1():
+    return render_template('yxt_tmp.html')
 
 
+@app.route("/yxt", methods=['POST'])
+def yxt2():
+    if request.form['q']!='':
+        search_index = request.form['q']
+        se = es.search(index="yxt*", body={"from":0,"size":10000,"query":{"bool":{"must":[{ "term" : {"mobile_num":search_index}}]}},\
+              "sort":{"trans_date":{"order":"desc"}}})
+        all_el = []
+        if se['hits']['total'] != 0:
+            for hit in se['hits']['hits']:
+                tmp = hit['_source']
+                tmp = yxt.cleanDate(tmp)
+                tmp = yxt.encryption(tmp)
+                tmp = yxt.toYuan(tmp)
+                all_el.append(tmp)
+            result = all_el
+        else:
+            result = {"error":"dfs"}
+        return render_template('yxt_tmp1.html', results=result) 
+    return render_template('yxt_tmp1.html', results={"error":"dfslk"})
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="10.1.80.172", port=5000, debug=True, threaded=True)

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>拉卡拉在线交易查询</title>
+<style>
+
+body {
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;    
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+
+
+
+/*----------------------*/
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+  function check(){
+    if(infoform.q.value == "") {
+      alert("请输入您要查询的手机号！")
+      return false;
+    }
+  }
+</script>
+
+</head>
+
+<body>
+    {% if results.error %}
+        <form id="submitform" name="infoform"  action="/yxt" method="post">
+            <h1>拉卡拉在线交易查询</h1>
+            请输入您要查询的手机号：<input type="text" name="q" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交" onsubmit="return check()">
+        </form>
+       <h1>对不起，您输入的用户不存在！！！！</h1>
+    {% else %}
+      <form id="submitform" action="/yxt" name="infoform" method="post">
+          <h1>拉卡拉在线交易查询</h1>
+          请输入您要查询的手机号：<input type="text" name="q" value={{ results[0]["mobile_num"] }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交" onsubmit="return check()">
+      </form>
+      <h2>尊敬的{{ results[0]["mobile_num"] }}用户，您在拉卡拉交易记录如下：</h2>
+      <table class="bordered">
+          <tr>
+              <th>序号</th>        
+              <th>交易日期</th>
+              <th>业务类型</th>
+              <th>交易卡</th>
+              <th>金额(元)</th>
+          </tr>
+    {% for i in results %}
+          <tr>
+              <td>{{ loop.index }}</td>        
+              <td>{{ i["trans_date"] }}</td>
+              <td>{{ i["trans_name"] }}</td>
+              <td>{{ i["cardno"] }}</td>
+              <td>{{ i["total_am"] }}</td>
+          </tr>
+    {% endfor %}
+    {% endif %}        
+</table>
+</body>
+</html>
